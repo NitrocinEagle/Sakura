@@ -1,0 +1,26 @@
+<!DOCTYPE html lang="en">
+{% block head %}
+    <head>
+        <meta charset="utf-8">
+        {% block title %}{% endblock %}
+        {% block load_static %}
+            {% include 'base/statics.html' %}
+        {% endblock %}
+    </head>
+{% endblock %}
+
+{% block body %}
+    <body>
+    {% block header %}
+        {% include 'base/header.html' %}
+        {% include 'base/menu.html' %}
+        {% include 'base/order_block.html' %}
+    {% endblock %}
+    {% block content %}{% endblock %}
+
+    {% block footer %}
+        {% include 'base/footer.html' %}
+    {% endblock %}
+    </body>
+{% endblock %}
+</html>

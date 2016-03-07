@@ -1,0 +1,146 @@
+body {
+    margin: 0px;
+    padding: 0px;
+}
+
+.row-margin-0 {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.header-top {
+    height: 40px;
+    background-color: #0f0f0f;
+    border-bottom: dashed #e8e8e8 2px;
+    color: #eaeaea;
+    z-index: 99;
+}
+
+.header-top .city {
+    padding-top: 7px;
+    padding-left: 20px;
+    font-size: 14px;
+    text-align: left;
+}
+
+.header-top .city .city-name {
+    text-decoration-style: dotted;
+    text-decoration-line: underline;
+}
+
+.header-top .order_call_back {
+    padding-top: 7px;
+    font-size: 14px;
+    text-align: center;
+}
+
+.header-top .order_call_back > a {
+    color: yellowgreen;
+    text-decoration-style: dotted;
+    text-decoration-line: underline;
+}
+
+.header-top .sign-in {
+    padding-top: 3px;
+    text-align: right;
+    padding-right: 20px;
+}
+
+#order-block {
+    width: 100%;
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+}
+
+.order {
+    background-color: black;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+.order .order-header {
+    color: greenyellow;
+    font-weight: bold;
+}
+
+.order hr {
+    margin-bottom: 5px;
+    margin-top: 2px;
+    width: 90%;
+    text-align: center;
+    opacity: 0.6;
+    border: 1px dashed yellowgreen;
+    border-style: none none dotted;
+}
+
+.order .order-finish {
+    text-align: right;
+    padding-bottom: 10px;
+    padding-right: 5%;
+}
+
+.order .order-finish .label {
+    color: black;
+    background-color: limegreen;
+}
+
+.order-info-text {
+    text-decoration-style: dotted;
+    text-decoration-line: underline;
+}
+
+.order-info {
+    padding-left: 5%;
+}
+
+.order-info .goods {
+    background-color: yellowgreen;
+    color: black;
+    text-decoration: none;
+}
+
+.order-info .money {
+    background-color: darkorange;
+    color: black;
+    text-decoration: none;
+}
+
+.hits {
+    background-color: black;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+.hits .hits-header {
+    text-align: center;
+    color: white;
+}
+
+.rolls {
+    background-color: black;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+.rolls .rolls-header {
+    text-align: center;
+    color: white;
+}
+
+.logo {
+    height: 400px;
+}
+
+.menu {
+    background-color: #1b6d85;
+}
+
+.logo .logo-img {
+    width: 100%;
+    background-image: url("/static/img/logo.jpg");
+    background-position: 0% 0%;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
