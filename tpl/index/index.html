@@ -3,6 +3,13 @@
 {% block title %}
     <title>Интернет-магазин "Сакура"</title>
 {% endblock %}
+{% block load_static %}
+    {{ block.super }}
+    {% load static %}
+    <script src="{% static 'unslider/js/unslider-min.js' %}"></script>
+    <link href="{% static 'unslider/css/unslider.css' %}" rel="stylesheet" type="text/css" media="all"/>
+    <link href="{% static 'unslider/css/unslider-dots.css' %}" rel="stylesheet" type="text/css" media="all"/>
+{% endblock %}
 {% block content %}
     <div class="container">
         <div class="row hits">
