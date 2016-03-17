@@ -1,6 +1,6 @@
 import os
 
-PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 SECRET_KEY = '$1r=+^b9$pj1q05lc92d*-%%7q-lcu#+&94n5v40wejpkvm2ox'
 
 DEBUG = True
@@ -15,6 +15,7 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
+    'app.index.user',
 )
 
 MIDDLEWARE_CLASSES = [
@@ -79,7 +80,7 @@ AUTH_PASSWORD_VALIDATORS = [
 LANGUAGE_CODE = 'ru'
 LANGUAGES = (('ru', 'Russian'),)
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Asia/Krasnoyarsk'
 
 USE_I18N = True
 

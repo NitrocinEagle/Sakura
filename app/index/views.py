@@ -1,15 +1,15 @@
 # -*- coding: utf8 -*-
 from django.contrib.auth import login, logout
 from django.http import HttpResponseRedirect
-from django.views.generic import FormView, TemplateView
+from django.views.generic import FormView
 from django.views.generic.base import View
 from django.contrib.auth.forms import AuthenticationForm
-
+from app.contrib.mixins import TemplateNameMixin
 
 class LoginFormView(FormView):
     form_class = AuthenticationForm
 
-    template_name = "index/login.html"
+    template_name = "site/index/login.html"
     success_url = "/"
 
     def form_valid(self, form):
@@ -24,6 +24,6 @@ class LogoutView(View):
         return HttpResponseRedirect("/login")
 
 
-class IndexView(TemplateView):
+class IndexView(TemplateNameMixin):
     template_name = 'index/index.html'
 
