@@ -5,6 +5,8 @@ CATEGORY_LIST = (
     ("sushi", u"Суши"),
     ("rolls", u"Роллы"),
     ("sets", u"Наборы"),
+    ("soups", u"Супы"),
+    ("desserts", u"Десерты"),
     ("tempura", u"Темпура"),
 )
 
@@ -18,12 +20,9 @@ TAG_LIST = (
 
 # Тестовый пользователь: test 1234test
 class Product(models.Model):
-    def get_upload_folder(self):
-        return "products/" + str(self.category)
-
     name = models.CharField(max_length=100, verbose_name=u"Название товара")
     category = models.CharField(choices=CATEGORY_LIST, max_length=20)
-    image = models.ImageField(upload_to=get_upload_folder(), blank=True,
+    image = models.ImageField(upload_to="products/", blank=True,
                               width_field=200, height_field=200,
                               verbose_name=u"изображение товара")
     price = models.FloatField(verbose_name=u"Цена", default=0.0, )

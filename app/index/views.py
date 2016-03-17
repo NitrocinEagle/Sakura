@@ -2,9 +2,9 @@
 from django.contrib.auth import login, logout
 from django.http import HttpResponseRedirect
 from django.views.generic import FormView
-from django.views.generic.base import View
+from django.views.generic.base import View, TemplateView
 from django.contrib.auth.forms import AuthenticationForm
-from app.contrib.mixins import TemplateNameMixin
+
 
 class LoginFormView(FormView):
     form_class = AuthenticationForm
@@ -24,6 +24,5 @@ class LogoutView(View):
         return HttpResponseRedirect("/login")
 
 
-class IndexView(TemplateNameMixin):
-    template_name = 'index/index.html'
-
+class IndexView(TemplateView):
+    template_name = 'site/index/index.html'

@@ -1,6 +1,6 @@
 # -*- coding: utf8 -*-
-from app.contrib.mixins import TemplateNameMixin
+from django.views.generic import TemplateView
 
 
-class UserView(TemplateNameMixin):
-    template_name = 'index/user.html'
+class UserView(TemplateView):
+    template_name = 'site/index/user.html'
