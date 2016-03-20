@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-
 from django.conf.urls import url
-from rolls.views import RollsView
+from django.views.generic import TemplateView
 
 urlpatterns = [
-    url(r'^rolls/', RollsView.as_view(), name="rolls"),
-    url(r'^sushi/', RollsView.as_view(), name="sushi"),
-    url(r'^tempura/', RollsView.as_view(), name="tempura"),
-    url(r'^sets/', RollsView.as_view(), name="sets"),
+    url(r'^rolls/', TemplateView(template_name="site/index/index.html"), name="rolls"),
+    url(r'^sushi/', TemplateView(template_name="site/index/index.html"), name="sushi"),
+    url(r'^tempura/', TemplateView(template_name="site/index/index.html"), name="tempura"),
+    url(r'^sets/', TemplateView(template_name="site/index/index.html"), name="sets"),
 ]

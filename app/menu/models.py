@@ -6,15 +6,16 @@ CATEGORY_LIST = (
     ("rolls", u"Роллы"),
     ("sets", u"Наборы"),
     ("soups", u"Супы"),
+    ("souces", u"Соусы"),
     ("desserts", u"Десерты"),
     ("tempura", u"Темпура"),
 )
 
 TAG_LIST = (
-    ("New", u"Новинка"),
-    ("Spicy", u"Острый"),
-    ("Veg", u"Вегетерианский"),
-    ("Hit", u"Хит"),
+    ("new", u"Новинка"),
+    ("spicy", u"Острый"),
+    ("veg", u"Вегетерианский"),
+    ("hit", u"Хит"),
 )
 
 
@@ -23,7 +24,6 @@ class Product(models.Model):
     name = models.CharField(max_length=100, verbose_name=u"Название товара")
     category = models.CharField(choices=CATEGORY_LIST, max_length=20)
     image = models.ImageField(upload_to="products/", blank=True,
-                              width_field=200, height_field=200,
                               verbose_name=u"изображение товара")
     price = models.FloatField(verbose_name=u"Цена", default=0.0, )
     is_enabled = models.BooleanField(verbose_name=u"В продаже ли товар",
