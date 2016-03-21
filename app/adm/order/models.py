@@ -7,5 +7,9 @@ class Order(models.Model):
     comments = models.TextField(blank=True,
                                 verbose_name=u"Комментарии к заказу")
 
+    class Meta:
+        verbose_name = 'заказ'
+        verbose_name_plural = 'заказы'
+
     def __unicode__(self):
         return u'Заказ %s' % self.id

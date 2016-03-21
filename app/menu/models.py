@@ -34,5 +34,10 @@ class Product(models.Model):
                            choices=TAG_LIST, blank=True, default=None)
     about = models.TextField(blank=True, verbose_name=u"О товаре")
 
+    class Meta:
+        ordering = ['name']
+        verbose_name = 'товар'
+        verbose_name_plural = 'товары'
+
     def __unicode__(self):
         return u'%s' % self.name
